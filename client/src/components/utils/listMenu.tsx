@@ -6,6 +6,7 @@ type ListMenu = {
     span: string;
     icon: boolean;
     iconType: ReactElement;
+    path: string;
 }
 
 export const listMenu: ListMenu[] = [
@@ -13,30 +14,35 @@ export const listMenu: ListMenu[] = [
         key: '1',
         span: 'Dashboard',
         icon: true,
-        iconType: <BiBarChartAlt />
+        iconType: <BiBarChartAlt />,
+        path: '/dashboard',
     },
     {
         key: '2',
         span: 'Calendar',
         icon: true,
-        iconType: <BiCalendar />
+        iconType: <BiCalendar />,
+        path: '/calendar',
     },
     {
         key: '3',
         span: 'Mail',
         icon: true,
         iconType: <BiEnvelope />,
+        path: '/mail',
     },
     {
         key: '4',
         span: 'Todo',
         icon: true,
-        iconType: <BiCheck />
+        iconType: <BiCheck />,
+        path: '/todo',
     },
     {
         key: '5',
         span: 'Contacts',
         icon: true,
-        iconType: <BiIdCard />
+        iconType: <BiIdCard />,
+        path: '/contacts',
     }
 ]

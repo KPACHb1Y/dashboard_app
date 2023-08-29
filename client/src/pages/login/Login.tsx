@@ -1,19 +1,14 @@
 import { memo } from 'react';
-import { styled } from 'styled-components';
 import { Button, Checkbox, Form, Input } from 'antd';
-
-const LoginTitle = styled.div`
-    font-size: 1rem;
-    color: #das;
-`
 
 type FieldType = {
     username?: string;
     password?: string;
     remember?: string;
+    setToken: () => void;
 }
 
-export const Login = memo(({ username, password, remember }: FieldType): JSX.Element => {
+export const Login = memo(({ username, password, remember, setToken }: FieldType): JSX.Element => {
 
     const onFinish = (values: any) => {
         console.log(`Success ${values}`)

@@ -1,12 +1,10 @@
 import './App.css';
-import { AppRouter } from './components/appRouter/AppRouter';
-import { MenuBar } from './components/menu/MenuBar';
-import { Sidebar } from './components/sidebar/Sidebar';
+import {MenuBar} from "./components/menu/MenuBar";
 
 function App() {
   return (
     <div className="App">
-      <AppRouter />
+      <MenuBar />
     </div>
   );
 }

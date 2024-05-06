@@ -3,23 +3,8 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import {listDotMenu} from "../../utils/listDotMenu";
 
-const options = [
-    'None',
-    'Atria',
-    'Callisto',
-    'Dione',
-    'Ganymede',
-    'Hangouts Call',
-    'Luna',
-    'Oberon',
-    'Phobos',
-    'Pyxis',
-    'Sedna',
-    'Titania',
-    'Triton',
-    'Umbriel',
-];
 
 const ITEM_HEIGHT = 48;
 export const DotMenu = memo(() => {
@@ -60,9 +45,10 @@ export const DotMenu = memo(() => {
                     },
                 }}
             >
-                {options.map((option) => (
-                    <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-                        {option}
+                {listDotMenu.map((option) => (
+                    <MenuItem key={option.key} onClick={handleClose}>
+                        {option.icon}
+                        {option.title}
                     </MenuItem>
                 ))}
             </Menu>

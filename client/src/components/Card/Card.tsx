@@ -20,6 +20,11 @@ interface IProp {
     avatars: Avatars[];
 }
 
+const WrapperCard = styled(Card)(() => ({
+    marginRight: 20,
+    boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.1)'
+}));
+
 const WrapperDescription = styled(Typography)(() => ({
     marginBottom: 15
 }));
@@ -52,7 +57,7 @@ const AvatarChild = styled(Avatar)(() => ({
 
 export const CardComponent = memo(({ title, description, time, avatars }: IProp) => {
     return (
-        <Card sx={{ minWidth: 300 }}>
+        <WrapperCard sx={{ minWidth: 300, height: '150px' }}>
             <CardContent>
                 <WrapperTitle>
                     <Typography variant="h5" component="div">
@@ -81,7 +86,7 @@ export const CardComponent = memo(({ title, description, time, avatars }: IProp)
                     </WrapperAvatars>
                 </WrapperFooterCard>
             </CardContent>
-        </Card>
+        </WrapperCard>
     )
 });
 
